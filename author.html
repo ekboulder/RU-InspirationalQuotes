@@ -1,0 +1,13 @@
+<div> my author page </div>	
+
+<div> Quotes by: {{quotes[authorIndex].author}} </div>
+<div class='quoteDisplay' ng-repeat="currentAuthor in $storage.quotes | filter : currentAuthor"> 
+<p>{{currentAuthor.quote}}</p>
+<p>Rating:<ng-rating ng-model="currentAuthor.rating"
+					editable=true
+					stars-count=5
+					based-on=5
+					>
+				</ng-rating></p>
+<button ng-click='removeQuote($index)'> Delete </button>
+</div>

@@ -1,0 +1,13 @@
+<div> my landing page </div>	
+<br>
+<div class ='quoteDisplay' ng-repeat="quote in $storage.quotes | filter : sortQuotes()">
+	<a href="#author/{{$index}}"> {{quote.quote}}</a>
+	<p>{{quote.author}}</p>
+	<p>Rating:<ng-rating ng-model="quote.rating"
+					editable=true
+					stars-count=5
+					based-on=5
+					>
+				</ng-rating></p>
+	<button ng-click='removeQuote($index)'> Delete </button>
+</div>

@@ -1,0 +1,51 @@
+<html ng-app="myApp" lang='en'>
+  <head>
+	   <meta charset="utf-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1">
+     <title>Inspirational Quote</title>
+     <link rel="stylesheet" href="main.css">
+   
+
+    <link href="ng-rating.css" rel="stylesheet" type="text/css" />
+<!-- optional font-awesome to have access to icons -->
+    <link href="font-awesome.css" rel="stylesheet" type="text/css" />
+
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular-route.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.js"></script>
+    
+    <script src="ng-rating.js"></script>
+
+  </head>
+  
+  <body ng-controller="mainController"> 
+  
+  <!-- <H1>counter: {{$storage.counter}}</H1>
+  <H1>local quotes array:{{$storage.quotes}}</H1> -->
+  <h1>Inspirational Quotes</h1>
+  	 
+     <div class='quoteEntry'>
+        <textarea ng-model='newQuote'> Your Quote </textarea> <br>
+        <input ng-model='newAuthor'> <br>
+        <button ng-click='addQuote()'> Submit </button>
+
+     </div>
+
+     <div ng-view> </div>
+
+
+
+
+
+
+
+
+
+     <script type="text/javascript" src="main.js"></script>
+  </body>
+
+</html>
